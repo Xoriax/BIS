@@ -1,0 +1,149 @@
+.container-card-michel * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container-card-michel {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-michel {
+    width: 350px;
+    height: 515px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.card-inner-michel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.front-michel,
+.back-michel {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-michel {
+    /*background: url('../../assets/images/Card/michel.jpg') center/cover no-repeat;*/ /*ligne pour img plus tard*/
+    background-color: #333;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.front-michel .front-card-h2-michel {
+    font-weight: 500;
+}
+
+.front-michel .front-card-p-michel {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.front-michel .front-card-btn-michel {
+    width: 150px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.back-michel {
+    background: #fff;
+    color: #333;
+    padding: 20px 40px;
+    transform: rotateY(180deg);
+    border: 1px solid #333;
+}
+
+.back-michel .back-card-h1-michel {
+    font-weight: bold;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+
+.back-michel .back-card-span-michel {
+    font-weight: 400;
+}
+
+.back-michel .back-card-p-michel {
+    font-size: 14px;
+}
+
+.back-michel .back-card-p-michel span {
+    font-weight: 600;
+}
+
+.back-michel .back-card-img-michel {
+    width: 120px;
+}
+
+.row-michel {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.back-michel .row-michel button {
+    background: #007bff;
+    color: #fff;
+    border: 0;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin: 0 15px 20px 0;
+    box-shadow: 0 8px 10px rgba(120, 0, 173, 0.3);
+}
+
+.back-michel .back-card-link-michel {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.back-michel .back-card-link-michel img {
+    width: 50%;
+}
+
+.card-michel:hover .card-inner-michel {
+    transform: rotateY(180deg);
+}
+
+.back-card-qr-michel {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-card-qr-michel:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}

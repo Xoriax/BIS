@@ -1,0 +1,149 @@
+.container-card-david * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container-card-david {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-david {
+    width: 350px;
+    height: 515px;
+    perspective: 1000px;
+    margin: 20px;
+}
+
+.card-inner-david {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.front-david,
+.back-david {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-david {
+    /*background: url('../../assets/images/Card/david.png') center/cover no-repeat;*/ /*ligne pour img plus tard*/
+    background-color: #333;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.front-david .front-card-h2-david {
+    font-weight: 500;
+}
+
+.front-david .front-card-p-david {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.front-david .front-card-btn-david {
+    width: 150px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.back-david {
+    background: #fff;
+    color: #333;
+    padding: 20px 40px;
+    transform: rotateY(180deg);
+    border: 1px solid #333;
+}
+
+.back-david .back-card-h1-david {
+    font-weight: bold;
+    line-height: 55px;
+    margin-bottom: 10px;
+}
+
+.back-david .back-card-span-david {
+    font-weight: 400;
+}
+
+.back-david .back-card-p-david {
+    font-size: 14px;
+}
+
+.back-david .back-card-p-david span {
+    font-weight: 600;
+}
+
+.back-david .back-card-img-david {
+    width: 120px;
+}
+
+.row-david {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.back-david .row-david button {
+    background: #007bff;
+    color: #fff;
+    border: 0;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin: 0 15px 20px 0;
+    box-shadow: 0 8px 10px rgba(120, 0, 173, 0.3);
+}
+
+.back-david .back-card-link-david {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.back-david .back-card-link-david img {
+    width: 50%;
+}
+
+.card-david:hover .card-inner-david {
+    transform: rotateY(180deg);
+}
+
+.back-card-qr-david {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-card-qr-david:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
