@@ -225,7 +225,7 @@ function TT() {
             </section>
 
             <div className="IToutsourcing-banner">
-                <h3>Nos Autres Prestation</h3>
+                <h3>Nos Autres Prestations</h3>
             </div>
 
             <Carousel />
